@@ -59,4 +59,4 @@ jobs:
         body_path: ${{ github.workspace }}-CHANGELOG.adoc
         generate_release_notes: true
         fail_on_unmatched_files: true
-        files: target/testrail-migration-${{ steps.version.outputs.version }}-SNAPSHOT.jar
+        files: target/testrail-migration-*-SNAPSHOT.jar
