@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Customer login</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C1</id>
+				<title>Login</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is registered</preconds>
+										<steps_separated><step>
+<index>1</index><content>User provides correct username and password</content><expected>Input field is filled with users password and username</expected></step>
+<step>
+<index>2</index><content>User press &quot;login&quot; button</content><expected>User is logged in and redirected to accounts overview</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C2</id>
+				<title>Login with wrong username (negative)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Low</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>User provides incorrect username</content><expected>User is not signed in, user gets message &quot;An internal error has occurred and has been logged&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C3</id>
+				<title>User provides invalid password (negative)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Low</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is registered</preconds>
+										<steps_separated><step>
+<index>1</index><content>User provides correct login and incorrect password</content><expected>User is not logged in, user gets the message: &quot;An internal error has occurred and has been logged.&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C4</id>
+				<title>User forgot login info</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is registered</preconds>
+										<steps_separated><step>
+<index>1</index><content>User presses &quot;forgot login info?&quot; button</content><expected>User is redirected to &quot;Customer Lookup&quot; page, user is asked to fill up additional information (first name, last name, address, city, zip code, SSN)</expected></step>
+<step>
+<index>2</index><content>User provides additional correct information (first name, last name, address, city, zip code, SSN)</content><expected>User gets the following information: &quot;Your login information was located successfully. You are now logged in&quot;, users login information (login and password) is shown, user is logged in</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C14</id>
+				<title>Swagger functionality</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on &quot;administration&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User presses &quot;SWAGGER&quot; button</content><expected>User is redirected to the Swagger UI</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>User registration</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C5</id>
+				<title>Registration</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>User presses &quot;register&quot; button</content><expected>1. User is redirected to the register site
+2. User is asked to provide personal info (first name, last name, address, cty, state, zip code, phone #, SSN)
+3. User is asked to provide his username and password</expected></step>
+<step>
+<index>2</index><content>User provides his personal information, his username and password</content><expected>Input field is filled with provided information</expected></step>
+<step>
+<index>3</index><content>User presses the &quot;register&quot; button</content><expected>1. User is logged in and redirected to &quot;Welcome (user name) site
+2. User gets communicate: &quot;Welcome jan
+Your account was created successfully. You are now logged in.&quot;
+</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C6</id>
+				<title>Registration with existing username (negative)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Low</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>User presses &quot;register&quot; button</content><expected>1. User is redirected to the register site
+2. User is asked to provide personal info (first name, last name, address, cty, state, zip code, phone #, SSN)
+3. User is asked to provide his username and password</expected></step>
+<step>
+<index>2</index><content>User provides his personal information, password and existing username
+
+
+</content><expected>Input field is filled with provided information</expected></step>
+<step>
+<index>3</index><content> User presses the &quot;register&quot; button</content><expected>1. User is not registered
+2. User gets following information: &quot;This username already exists.&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Email functionality</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C7</id>
+				<title>Customer Care functionability</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is registered</preconds>
+										<steps_separated><step>
+<index>1</index><content>User presses envelope icon</content><expected>1. User is redirected to &quot;Customer Care&quot; site
+2. User is asked to fill out form (name, email , phone #), user gets empty field to type mmessage
+
+
+</expected></step>
+<step>
+<index>2</index><content>User provides information (name, email, phone #), user types message</content><expected>Field is filled with provided information</expected></step>
+<step>
+<index>3</index><content>User presses &quot;send to customer care&quot; button</content><expected>User gets following information: &quot;Thank you (user name) A Customer Care Representative will be contacting you.&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Administration</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C8</id>
+				<title>Database initialization</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on &quot;Administration&quot; page
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;initialize&quot; button</content><expected>Following information is shown: &quot;Database Initialized&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C9</id>
+				<title>Database cleaning</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on &quot;administration&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;Clean&quot; button</content><expected>The following information is shown: &quot;Database Cleaned&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C10</id>
+				<title>JMS service status shutdown</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on &quot;administration&quot; page
+JMS service status is &quot;Running&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>User presses &quot;shutdown&quot; button</content><expected>JMS service status changed to &quot;Stopped&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C11</id>
+				<title>JMS service status startup</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on &quot;administration&quot; page
+JMS Service status is &quot;Stopped&quot;</preconds>
+										<steps_separated><step>
+<index>1</index><content>User presses &quot;Sartup&quot; button</content><expected>JMS Service status changed to &quot;running&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C12</id>
+				<title>Data acces mode functionability</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on &quot;Administration&quot; page
+Data Acces mode is set to default (JDBC)</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks one of available data access modes (SOAP, REST[JSON], REST[XML], JDBC) </content><expected>Clicked data acces mode is selected</expected></step>
+<step>
+<index>2</index><content>User clicks &quot;submit&quot; button</content><expected>1. Following information is shown: &quot;Settings saved successfully.&quot;
+2. User choice is saved</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C13</id>
+				<title>Application settings functionability</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on &quot;Administration&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User provides following information: initial balance, minimum balance
+
+</content><expected>Provided information is filled in input field</expected></step>
+<step>
+<index>2</index><content>User chooses loan provider (JMS, web service, local) and loan processor (available funds, down payment, combined)</content><expected>1. Chosen loan provider is shown 
+2. Chosen Loan processor is shown</expected></step>
+<step>
+<index>3</index><content>User fills &quot;threshold%&quot; field</content><expected>Provided information is filled in input field</expected></step>
+<step>
+<index>4</index><content>User clicks &quot;submit&quot; button</content><expected>1. User gets following information: &quot;Settings saved successfully.&quot;
+2. Provided information is saved on &quot;administration page&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Swagger</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C15</id>
+				<title>User is showing API information</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on SWAGGER UI</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;show/hide&quot; button</content><expected>API information is displayed/ API information is hidden</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C16</id>
+				<title>&quot;Expand/List operations&quot; button functionability</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on Swagger UI
+Detailed API information is hidden</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;Expand Operations&quot; button</content><expected>Detailed API information is shown</expected></step>
+<step>
+<index>2</index><content>User clicks &quot;List Operations&quot; button</content><expected>Detailed API information is hidden</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
