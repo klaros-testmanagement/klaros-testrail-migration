@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S2</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Cart</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C33</id>
+				<title>The user can add the product to the shopping cart</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>The user is on the homepage.</preconds>
+										<steps_separated><step>
+<index>1</index><content>The user clicks the &apos;add to cart&apos; button.</content><expected>The product is added to the cart.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C34</id>
+				<title>The user can remove the product from the cart</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>The user has added the product to the cart.</preconds>
+										<steps_separated><step>
+<index>1</index><content>The user presses the button with the cart icon.</content><expected>A window appears with the products in the shopping cart.</expected></step>
+<step>
+<index>2</index><content>The user presses the &quot;X&quot; button (remove product from cart).</content><expected>The product is removed from the cart.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C35</id>
+				<title>The user can increase the number of products in the shopping cart</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1 The user has a product in the basket
+2 The user is in the &quot; cart&quot; section</preconds>
+										<steps_separated><step>
+<index>1</index><content>The user clicks the &quot;+&quot; button.</content><expected>The number of products in the basket is increased by 1, the price in the order summary is increased by the value of the product added. The number next to the &quot; cart&quot; icon increases by the number of products added.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C36</id>
+				<title>The user can reduce the number of products in the shopping cart</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1 The user has more than one product in the shopping basket
+2 The user is in the &quot;shopping basket&quot; section</preconds>
+										<steps_separated><step>
+<index>1</index><content>The user presses the &quot;-&quot; button. </content><expected>The number of products in the basket is reduced by 1, the price in the order summary is reduced by the value of the product deducted. The number next to the &quot; cart&quot; icon reduces by the number of products added.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C37</id>
+				<title>The user can proceed to the &quot;checkout&quot; section</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1 User has an product in the shopping basket
+2 User is in the &quot; Cart&quot; section</preconds>
+										<steps_separated><step>
+<index>1</index><content>The user clicks the &apos;checkout&apos; button.</content><expected>The message &quot;Checkout - Subtotal: $10.90&quot; appears.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C39</id>
+				<title>The user goes to the &quot;checkout&quot; section without any products in the shopping cart (negative)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Low</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1 User does not have any products in the shopping cart
+2 The user is in the &quot;shopping cart&quot; section</preconds>
+										<steps_separated><step>
+<index>1</index><content>The user clicks the &apos;checkout&apos; button.</content><expected>The user is not taken to the &quot;checkout&quot; section, the message &quot;Add some product in the cart!&quot; appears.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Search filters</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C38</id>
+				<title>The user can use filter products on the website</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>The user is on the homepage.</preconds>
+										<steps_separated><step>
+<index>1</index><content>User presses filter button (XS, S, M, ML, L, XL, XXL)</content><expected>Products marked with the corresponding filter are displayed on the page.</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>

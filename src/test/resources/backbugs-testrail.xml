@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S3</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Homepage</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C45</id>
+				<title>Home page - upper left icon functionality</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Low</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on BackBugs homepage</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks upper left icon</content><expected>User is redirected to &quot;Home&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C46</id>
+				<title>BackBugs - Menu button</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on BackBugs homepage</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;Menu&quot; button in top-right corner</content><expected>Menu is expanded</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C54</id>
+				<title>Watch Video button functonality</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on BackBugs homepage</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;Watch video&quot; button</content><expected>User is redirected to Youtube page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C55</id>
+				<title>&quot;Read Blog&quot; button functionality</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on BackBugs homepage</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;Read Blog&quot; button</content><expected>User is redirected to &quot;BackBugs - blog&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C56</id>
+				<title>&quot;About us&quot; button functonality</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on BackBugs homepage</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;About us&quot; button</content><expected>User is redirected to &quot;About - BackBugs&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>BackBugs menu</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C47</id>
+				<title>BackBugs menu - &quot;home&quot; button</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on BackBugs homepage
+Menu is expanded
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;home&quot; button</content><expected>User is redirected to BackBugs homepage</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C48</id>
+				<title>BackBugs menu - &quot;About&quot; button</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on BackBugs homepage
+Menu is expanded
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;About&quot; button</content><expected>User is redirected to &quot;About&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C49</id>
+				<title>BackBugs menu - &quot;blog&quot; button</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on BackBugs homepage
+Menu is expanded</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;blog&quot; button</content><expected>User is redirected to &quot;Blog - BackBugs&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C50</id>
+				<title>BackBugs menu - &quot;Contact&quot; button</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on BackBugs homepage
+Menu is expanded</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;contact&quot; button</content><expected>User is redirected to &quot;Contact - BackBugs&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C51</id>
+				<title>BackBugs menu - &quot;Youtube&quot; button</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on BackBugs homepage
+Menu is expanded</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;Youtube&quot; button</content><expected>User is redirected to Youtube page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C53</id>
+				<title>BackBugs menu - &quot;X&quot; button</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on BackBugs homepage
+Menu is expanded</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;X&quot; button</content><expected>Menu is closing</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C52</id>
+				<title>BackBugs menu - &quot;Github&quot; button</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is on BackBugs homepage
+Menu is expanded</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;Github&quot; button</content><expected>User is redirected to Github page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S2</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Login</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C17</id>
+				<title>Login</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>User provides login (standard_user) and password (secret_sauce)</content><expected>Users username and password are filled in input field</expected></step>
+<step>
+<index>2</index><content>User clicks the &quot;login&quot; button</content><expected>1. User is logged in
+2. User is redirected to the &quot;products&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C18</id>
+				<title>Login with wrong password (negative)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Low</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>User provides correct username (standard_user) and wrong password</content><expected>Users username and password are filled in input field</expected></step>
+<step>
+<index>2</index><content>User clicks the &quot;login&quot; button</content><expected>1. User is not logged in
+2. Following information is shown: Epic sadface: Username and password do not match any user in this service</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C19</id>
+				<title>Login with wrong username (negative)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Low</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>User provides correct password and incorrect username</content><expected>Users username and password are filled in input field</expected></step>
+<step>
+<index>2</index><content>User clicks the &quot;login&quot; button</content><expected>1. User is not logged in
+2. Following information is shown: Epic sadface: Username and password do not match any user in this service</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C20</id>
+				<title>Log in as locked out user</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>User provides login (locked_out_user) and password (secret_sauce)</content><expected>Users username and password are filled in input field</expected></step>
+<step>
+<index>2</index><content>User clicks the &quot;login&quot; button</content><expected>1. User is not logged in
+2. The following iformation is shown: &quot;Epic sadface: Sorry, this user has been locked out.&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C21</id>
+				<title>Log in as Problem user</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>User provides login (problem_user) and password (secret_sauce)</content><expected>Users username and password are filled in input field</expected></step>
+<step>
+<index>2</index><content>User clicks the &quot;login&quot; button</content><expected>1. User is logged in
+2. User is redirected to the &quot;products&quot; page
+3. Pictures of dog are shown instead of product pictures</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C22</id>
+				<title>Log in as perofrmance glitch user</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps_separated><step>
+<index>1</index><content>User provides login (performance_glitch_user) and password (secret_sauce)</content><expected>Users username and password are filled in input field</expected></step>
+<step>
+<index>2</index><content>User clicks the &quot;login&quot; button</content><expected>1. User is logged in
+2. User is redirected to the &quot;products&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Cart functonality</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C23</id>
+				<title>Adding products to cart</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as standard user
+User is on &quot;products&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;Add to cart&quot; button</content><expected>1. Product is added to the cart
+2. Button &quot;add to cart&quot; changes to &quot;remove&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C24</id>
+				<title>Removing products from cart</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as standard user
+User is on &quot;products&quot; page
+User has product added to cart</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;Remove&quot; button</content><expected>1. Product is removed from cart
+2. &quot;Remove&quot; button changes to &quot;Add to cart&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C25</id>
+				<title>Redirecting to &quot;Your cart&quot; page</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as standard user
+User is on &quot;products&quot; page
+User has product added to cart</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks cart icon in top right corner</content><expected>User is redirected to &quot;Your cart&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C26</id>
+				<title>Removing products from &quot;your cart&quot; page</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as standard user
+User is on &quot;Your cart&quot; page
+User has product added to cart</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;remove&quot; button</content><expected>Product is removed from &quot;Your cart&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C27</id>
+				<title>Functionality of &quot;Continue shopping&quot; button</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as standard user
+User is on &quot;Your cart&quot; page
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;Continue shopping&quot; button</content><expected>User is redirected to &quot;Products&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C28</id>
+				<title>Functionality of &quot;Checkout&quot; button</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as standard user
+User is on &quot;Your cart&quot; page
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;Checkout&quot; button</content><expected>User is redirected to &quot;CHECKOUT: YOUR INFORMATION&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Checkout</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C29</id>
+				<title>&quot;CHECKOUT: YOUR INFORMATION&quot;  page functionality</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;CHECKOUT: YOUR INFORMATION&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User provides information (first name, last name, ZIP code)</content><expected>Provided information is filled up in respectful input fields</expected></step>
+<step>
+<index>2</index><content>User clicks &quot;Continue&quot; button</content><expected>1. User is redirected to &quot;CHECKOUT: OVERVIEW&quot; page
+2. Payment information, Shipping information and total cost is shown</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C30</id>
+				<title>&quot;CHECKOUT: YOUR INFORMATION&quot; page cancel button</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;CHECKOUT: YOUR INFORMATION&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;cancel&quot; button</content><expected>User is redirected to &quot;Your cart&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C32</id>
+				<title>&quot;CHECKOUT: YOUR INFORMATION&quot; page without First name (negative)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;CHECKOUT: YOUR INFORMATION&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User provides information (last name, ZIP code), user leaves &quot;First name&quot; input field empty</content><expected>1. Provided information is filled up in respectful input fields
+2. Field &quot;First name&quot; remains empty</expected></step>
+<step>
+<index>2</index><content>User clicks &quot;Continue&quot; button</content><expected>User gets following information: &quot;Error: First Name is required&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C33</id>
+				<title>&quot;CHECKOUT: YOUR INFORMATION&quot; page without Last name (negative)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Low</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;CHECKOUT: YOUR INFORMATION&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User provides information (first name, ZIP code), user leaves &quot;Last name&quot; input field empty</content><expected>1.Provided information is filled up in respectful input fields
+
+2. Field &quot;Last name&quot; remains empty</expected></step>
+<step>
+<index>2</index><content>User clicks &quot;Continue&quot; button</content><expected>User gets following information: &quot;Error: Last Name is required&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C34</id>
+				<title>&quot;CHECKOUT: YOUR INFORMATION&quot; page without ZIP code (negative)</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Low</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;CHECKOUT: YOUR INFORMATION&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User provides information (last name, first name), user leaves &quot;ZIP code&quot; input field empty</content><expected>1.Provided information is filled up in respectful input fields
+
+2. Field &quot;ZIP code&quot; remains empty</expected></step>
+<step>
+<index>2</index><content>User clicks &quot;Continue&quot; button</content><expected>User gets following information: &quot;Error: Postal Code is required&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C35</id>
+				<title>CHECKOUT: OVERVIEW page functionality</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;CHECKOUT: OVERVIEW&quot; page
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks the &quot;finish&quot; button</content><expected>1. User is redirected to &quot;Checkout:Complete&quot; page
+2. Following information is dosplayed: &quot;THANK YOU FOR YOUR ORDER
+Your order has been dispatched, and will arrive just as fast as the pony can get there!&quot;
+3. Picture of robot riding a pony is shown</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C37</id>
+				<title>CHECKOUT: OVERVIEW page functionality - &quot;cancel&quot; button</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;CHECKOUT: OVERVIEW&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks the &quot;cancel&quot; button</content><expected>User is redirected to &quot;Products&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C36</id>
+				<title>&quot;CHECKOUT: COMPLETE!&quot; page functionality</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;CHECKOUT: COMPLETE!&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks the &quot;BACK HOME&quot; button</content><expected>User is redirected to &quot;Products&quot; page</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>&quot;Products&quot; page</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C38</id>
+				<title>Drop- down menu</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;products&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;menu&quot; icon in top-left corner</content><expected>Menu is expanded</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C39</id>
+				<title>Menu - Logout</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;products&quot; page
+Menu is expanded
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks &quot;Logout&quot; button in menu</content><expected>User is logged out</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C42</id>
+				<title>&quot;Products&quot; page Twitter icon</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;products&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks Twitter icon</content><expected>Sauce labs Twitter page is opened in new tab</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C43</id>
+				<title>&quot;Products&quot; page Facebook icon</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;products&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks Facebook icon</content><expected>Sauce labs Facebook page is opened in new tab</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C44</id>
+				<title>&quot;Products&quot; page Linkedin icon</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;products&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks Linkedin icon</content><expected>Sauce labs Linkedin page is opened in new tab</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C41</id>
+				<title>Sorting products on &quot;products&apos; page</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in as &quot;standard_user&quot;
+User is on &quot;products&quot; page</preconds>
+										<steps_separated><step>
+<index>1</index><content>User clicks on sorting field in upper right corner</content><expected>4 sorting options are presented (name[A-Z];name[Z-A];price[low-high];price[high-low])</expected></step>
+<step>
+<index>2</index><content>User clicks one of possible sorting options (name[A-Z];name[Z-A];price[low-high];price[high-low]))</content><expected>Products on page are sorted by (name[A-Z];name[Z-A];price[low-high];price[high-low])</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
