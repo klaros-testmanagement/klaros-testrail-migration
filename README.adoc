@@ -70,7 +70,7 @@ In the command line execution example below the following placeholder are presen
 
 [source, bash]
 ----
-java -Xmx512m -jar testrail-migration-1.0.0.jar -t <TESTRAIL_XML> -T <KLAROS_XML>
+java -Xmx512m -jar testrail-migration-1.0.1.jar -t <TESTRAIL_XML> -T <KLAROS_XML>
 ----
 
 === Uploading the Transformed XML File
