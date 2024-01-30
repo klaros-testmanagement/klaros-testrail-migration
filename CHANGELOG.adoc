@@ -1,5 +1,11 @@
 = Changelog
 
+== Version 1.0.1
+
+Fixed Issues:
+
+#2 Wrong main class declared in MANIFEST.MF
+
 == Version 1.0.0
 
 Initial version.
