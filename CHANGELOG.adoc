@@ -1,5 +1,11 @@
 = Changelog
 
+== Version 1.0.3
+
+Fixed Issues:
+
+#6 Add supported for nested sections
+
 == Version 1.0.2
 
 Fixed Issues:

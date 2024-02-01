@@ -53,12 +53,26 @@ public final class TestCaseParser {
             throw new ParsingException("Not a valid TestRail export file");
         }
 
-        final Iterator<Node> sectionsNodesIterator = doc.getRootElement().query("sections").iterator();
-        if (sectionsNodesIterator.hasNext()) {
-            parseSections(sectionsNodesIterator.next(), projectContext, categoryBuilder);
-        }
+        parseSectionContainers(doc.getRootElement(), projectContext, categoryBuilder);
 
         projectContext.getTestCaseContainer().setCategoryTree(categoryBuilder.getCategoryTree());
+    }
+
+    /**
+     * Parses the sections containers.
+     *
+     * @param node the node to parse
+     * @param projectContext the project context
+     * @param categoryBuilder the category builder
+     */
+    private static void parseSectionContainers(final Node node, final ProjectContext projectContext,
+        final CategoryBuilder categoryBuilder) {
+
+        final Iterator<Node> sectionsNodesIterator = node.query("sections").iterator();
+        if (sectionsNodesIterator.hasNext()) {
+            final Node next = sectionsNodesIterator.next();
+            parseSections(next, projectContext, categoryBuilder);
+        }
     }
 
     /**
@@ -77,6 +91,9 @@ public final class TestCaseParser {
             final String nodeName = getNodeElementText(section, "name");
             final String nodeDescription = getNodeElementText(section, "description");
             categoryBuilder.pushNewCategory(nodeName, nodeDescription);
+
+            parseSectionContainers(section, projectContext, categoryBuilder);
+
             parseTestCases(section, projectContext, categoryBuilder);
             categoryBuilder.popCategory(nodeName);
         }
