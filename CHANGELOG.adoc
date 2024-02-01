@@ -1,5 +1,11 @@
 = Changelog
 
+== Version 1.0.2
+
+Fixed Issues:
+
+#4 Maven shade plugin must not optimize shaded jar
+
 == Version 1.0.1
 
 Fixed Issues:
