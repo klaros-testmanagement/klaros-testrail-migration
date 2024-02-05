@@ -14,8 +14,14 @@ package de.verit.klaros.migration.testrail.container.testcase;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CategoryBuilder {
+
+    public static final Pattern NODE_PATTERN = Pattern.compile("^\\d+_([^/]+)/.*");
+    public static final Pattern PREFIX_NAME_PATTERN = Pattern.compile("^\\d+_(.*)");
+    public static final Pattern POSTFIX_NAME_PATTERN = Pattern.compile("(.*)_\\\\d+");
 
     private CategoryTree categoryTree;
     private Deque<CategoryNode> categoryStack;
@@ -24,6 +30,53 @@ public class CategoryBuilder {
 
         categoryTree = null;
         categoryStack = new ArrayDeque<>();
+    }
+
+    /**
+     * Gets the category nodes.
+     *
+     * @param input the input
+     * @return the category nodes
+     */
+    public CategoryNode getCategoryChain() {
+
+        Object[] nodes = categoryStack.toArray();
+        CategoryNode result =  new CategoryNode(((CategoryNode) nodes[nodes.length - 1]).getName());
+        CategoryNode activeNode =  result;
+        for (int i = nodes.length - 1; i >= 0; i--) {
+            final CategoryNode currentNode = (CategoryNode) nodes[i];
+            activeNode.setName(currentNode.getName());
+            if (i > 0) {
+                CategoryNode nextNode = new CategoryNode();
+                activeNode.getChildren().add(nextNode);
+                activeNode = nextNode;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Gets the object name.
+     *
+     * @param input the input
+     * @return the object name
+     */
+    public String getObjectName(final String input) {
+
+        String name = input.substring(input.lastIndexOf('/') + 1);
+        final String result;
+        final Matcher prefixMatcher = PREFIX_NAME_PATTERN.matcher(name);
+        if (prefixMatcher.matches()) {
+            result = prefixMatcher.group(1);
+        } else {
+            final Matcher postfixMatcher = POSTFIX_NAME_PATTERN.matcher(name);
+            if (prefixMatcher.matches()) {
+                result = postfixMatcher.group(1);
+            } else {
+                result = name;
+            }
+        }
+        return result.replace('_', ' ');
     }
 
     /**
@@ -52,16 +105,16 @@ public class CategoryBuilder {
      * @param name the name
      * @param description the description
      */
-    public void pushNewCategory(final String name, final String description) {
+    public void pushNewCategory(final String name) {
 
         if (categoryTree == null) {
             categoryTree = new CategoryTree("Categories");
-            final CategoryNode root = new CategoryNode("All", null);
+            final CategoryNode root = new CategoryNode("All");
             categoryTree.setRoot(root);
             categoryStack.push(root);
         }
 
-        CategoryNode newNode = new CategoryNode(name, description);
+        CategoryNode newNode = new CategoryNode(name);
 
         boolean present = false;
         final CategoryNode currentCategory = getCategory();

@@ -1,5 +1,11 @@
 = Changelog
 
+== Version 1.0.4
+
+Fixed Issues:
+
+#8 Migrated test cases are not coupling in the original sections
+
 == Version 1.0.3
 
 Fixed Issues:

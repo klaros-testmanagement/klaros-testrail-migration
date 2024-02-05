@@ -26,7 +26,6 @@ public class CategoryNode implements Serializable {
     private static final long serialVersionUID = -953602324130842052L;
 
     private String name;
-    private String description;
     private List<CategoryNode> children;
 
     /**
@@ -34,19 +33,18 @@ public class CategoryNode implements Serializable {
      */
     public CategoryNode() {
 
+        children = new ArrayList<>();
     }
 
     /**
      * Instantiates a new category node.
      *
      * @param name the category name
-     * @param name the category description
      */
-    public CategoryNode(final String name, final String description) {
+    public CategoryNode(final String name) {
 
         children = new ArrayList<>();
         this.name = name;
-        this.description = description;
     }
 
 
@@ -64,22 +62,6 @@ public class CategoryNode implements Serializable {
     public void setName(String name) {
 
         this.name = name;
-    }
-
-    /**
-     * @return Returns the description.
-     */
-    public String getDescription() {
-
-        return description;
-    }
-
-    /**
-     * @param name The description to set.
-     */
-    public void setDescription(final String description) {
-
-        this.description = description;
     }
 
     /**

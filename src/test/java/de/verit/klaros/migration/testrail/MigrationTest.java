@@ -58,4 +58,12 @@ class MigrationTest {
         assertTrue(true);
     }
 
+    @Test
+    void testMasterMigration() throws ParsingException, IOException, JAXBException {
+
+        TestRailTestMigration.migrateTestCases("src/test/resources/master-testrail.xml",
+            "target/master-klaros.xml");
+        assertTrue(true);
+    }
+
 }
