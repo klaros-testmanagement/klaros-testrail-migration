@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.verit.klaros</groupId>
   <artifactId>testrail-migration</artifactId>
-  <version>1.0.4W-SNAPSHOT</version>
+  <version>1.0.4-SNAPSHOT</version>
 
   <name>TestRail Migration to Klaros Test Management</name>
   <description>This project migrates TestRail test cases to Klaros-Testmanagement.
