@@ -89,12 +89,11 @@ public final class TestCaseParser {
         while (sectionsIterator.hasNext()) {
             final Node section = sectionsIterator.next();
             final String nodeName = getNodeElementText(section, "name");
-            final String nodeDescription = getNodeElementText(section, "description");
-            categoryBuilder.pushNewCategory(nodeName, nodeDescription);
-
-            parseSectionContainers(section, projectContext, categoryBuilder);
+            categoryBuilder.pushNewCategory(nodeName);
 
             parseTestCases(section, projectContext, categoryBuilder);
+            parseSectionContainers(section, projectContext, categoryBuilder);
+
             categoryBuilder.popCategory(nodeName);
         }
     }
@@ -119,7 +118,7 @@ public final class TestCaseParser {
             testCase.setShortname(getNodeElementText(testCaseNode, "title"));
             testCase.setPriority(mapToPriority(getNodeElementText(testCaseNode, "priority")));
             testCase.setAreatopic(mapToAreatopic(getNodeElementText(testCaseNode, "type")));
-            testCase.setCategory(categoryBuilder.getCategory());
+            testCase.setCategory(categoryBuilder.getCategoryChain());
 
             testCase.setPrecondition(getNodeElementText(testCaseNode, "custom/preconds"));
 

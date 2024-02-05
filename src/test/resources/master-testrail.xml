@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S8123</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+			<name>Function Test</name>
+			<description></description>
+			<sections>
+				<section>
+					<name>Section 1</name>
+					<description></description>
+					<cases>
+						<case>
+							<id>C2221114</id>
+							<title>Test case 1</title>
+							<type>Functionality</type>
+							<priority>High</priority>
+							<estimate></estimate>
+							<references></references>
+							<custom>
+								<steps_separated>
+									<step>
+										<index>1</index>
+										<content>Step 1</content>
+										<expected>Verify no error</expected>
+									</step>
+									<step>
+										<index>2</index>
+										<content>Step 2</content>
+										<expected>Verify no error 2</expected>
+									</step>
+									<step>
+										<index>3</index>
+										<content>Step 3</content>
+										<expected>Verify no error 3</expected>
+									</step>
+								</steps_separated>
+							</custom>
+						</case>
+						<case>
+							<id>C2221114</id>
+							<title>Test case 2</title>
+							<type>Functionality</type>
+							<priority>High</priority>
+							<estimate></estimate>
+							<references></references>
+							<custom>
+								<steps_separated>
+									<step>
+										<index>1</index>
+										<content>Step 1</content>
+										<expected>Verify no error</expected>
+									</step>
+									<step>
+										<index>2</index>
+										<content>Step 2</content>
+										<expected>Verify no error 2</expected>
+									</step>
+									<step>
+										<index>3</index>
+										<content>Step 3</content>
+										<expected>Verify no error 3</expected>
+									</step>
+								</steps_separated>
+							</custom>
+						</case>
+						<case>
+							<id>C2221116</id>
+							<title>Test case 3</title>
+							<type>Functionality</type>
+							<priority>High</priority>
+							<estimate></estimate>
+							<references></references>
+							<custom>
+								<steps_separated>
+									<step>
+										<index>1</index>
+										<content>$%^
+n12
+%%%%
+^^^^</content>
+										<expected>@#$%</expected>
+									</step>
+									<step>
+										<index>2</index>
+										<content>12323
+123123
+3124213g1233
+****</content>
+										<expected>p***4</expected>
+									</step>
+								</steps_separated>
+							</custom>
+						</case>
+					</cases>
+				</section>
+				<section>
+					<name>Logger</name>
+					<description></description>
+					<cases>
+						<case>
+							<id>C2228993</id>
+							<title>GUI Logger</title>
+							<type>Functionality</type>
+							<priority>High</priority>
+							<estimate></estimate>
+							<references></references>
+							<custom>
+								<steps_separated>
+									<step>
+										<index>1</index>
+										<content>Set 1234
+1234
+1234</content>
+										<expected></expected>
+									</step>
+									<step>
+										<index>2</index>
+										<content>Login to GUI 88**</content>
+										<expected>123
+1234&amp;1234
+1234
+    &quot;Objects&quot;: [
+        {
+            &quot;ObjName&quot;: &quot;1234e&quot;,
+            &quot;Param&quot;: [
+                {
+                    &quot;ParamName&quot;: &quot;idle&quot;,
+                    &quot;ParamValue&quot;: &quot;97&quot;
+                }
+            ]
+        }
+    ]
+}
+</expected>
+									</step>
+								</steps_separated>
+							</custom>
+						</case>
+						
+					</cases>
+				</section>
+			</sections>
+		</section>
+		<section>
+			<name>API Test</name>
+			<description></description>
+			<sections>
+				<section>
+					<name>API 1</name>
+					<description></description>
+					<cases>
+						<case>
+							<id>C22211141</id>
+							<title>Test case 4</title>
+							<type>Functionality</type>
+							<priority>High</priority>
+							<estimate></estimate>
+							<references></references>
+							<custom>
+								<steps_separated>
+									<step>
+										<index>1</index>
+										<content>Step 1</content>
+										<expected>Verify no error</expected>
+									</step>
+									<step>
+										<index>2</index>
+										<content>Step 2</content>
+										<expected>Verify no error 2</expected>
+									</step>
+									<step>
+										<index>3</index>
+										<content>Step 3</content>
+										<expected>Verify no error 3</expected>
+									</step>
+								</steps_separated>
+							</custom>
+						</case>
+						<case>
+							<id>C22211142</id>
+							<title>Test case 5</title>
+							<type>Functionality</type>
+							<priority>High</priority>
+							<estimate></estimate>
+							<references></references>
+							<custom>
+								<steps_separated>
+									<step>
+										<index>1</index>
+										<content>Step 1</content>
+										<expected>Verify no error</expected>
+									</step>
+									<step>
+										<index>2</index>
+										<content>Step 2</content>
+										<expected>Verify no error 2</expected>
+									</step>
+									<step>
+										<index>3</index>
+										<content>Step 3</content>
+										<expected>Verify no error 3</expected>
+									</step>
+								</steps_separated>
+							</custom>
+						</case>
+						<case>
+							<id>C22211162</id>
+							<title>Test case 6</title>
+							<type>Automated</type>
+							<priority>High</priority>
+							<estimate></estimate>
+							<references></references>
+							<custom>
+								<steps_separated>
+									<step>
+										<index>1</index>
+										<content>$%^
+n12
+%%%%
+^^^^</content>
+										<expected>@#$%</expected>
+									</step>
+									<step>
+										<index>2</index>
+										<content>12323
+123123
+3124213g1233
+****</content>
+										<expected>p***4</expected>
+									</step>
+								</steps_separated>
+							</custom>
+						</case>
+					</cases>
+				</section>
+				<section>
+					<name>API 2</name>
+					<description></description>
+					<cases>
+						<case>
+							<id>C22289933</id>
+							<title>GUI Logger 1</title>
+							<type>Functionality</type>
+							<priority>High</priority>
+							<estimate></estimate>
+							<references></references>
+							<custom>
+								<steps_separated>
+									<step>
+										<index>1</index>
+										<content>Set 1234
+1234
+1234</content>
+										<expected></expected>
+									</step>
+									<step>
+										<index>2</index>
+										<content>Login to GUI 999**</content>
+										<expected>123
+1234&amp;1234
+1234
+    &quot;Objects&quot;: [
+        {
+            &quot;ObjName&quot;: &quot;1234e&quot;,
+            &quot;Param&quot;: [
+                {
+                    &quot;ParamName&quot;: &quot;idle&quot;,
+                    &quot;ParamValue&quot;: &quot;97&quot;
+                }
+            ]
+        }
+    ]
+}
+</expected>
+									</step>
+								</steps_separated>
+							</custom>
+						</case>
+						
+					</cases>
+				</section>
+			</sections>
+		</section>
+		<section>
+			<name>GUI Test</name>
+			<description></description>
+			<sections>
+				<section>
+					<name>GUI 1</name>
+					<description></description>
+					<cases>
+						<case>
+							<id>C22211145</id>
+							<title>Test case 7</title>
+							<type>Automated</type>
+							<priority>High</priority>
+							<estimate></estimate>
+							<references></references>
+							<custom>
+								<steps_separated>
+									<step>
+										<index>1</index>
+										<content>Step 1</content>
+										<expected>Verify no error</expected>
+									</step>
+									<step>
+										<index>2</index>
+										<content>Step 2</content>
+										<expected>Verify no error 2</expected>
+									</step>
+									<step>
+										<index>3</index>
+										<content>Step 3</content>
+										<expected>Verify no error 3</expected>
+									</step>
+								</steps_separated>
+							</custom>
+						</case>
+						<case>
+							<id>C2221114</id>
+							<title>Test case 8</title>
+							<type>Functionality</type>
+							<priority>High</priority>
+							<estimate></estimate>
+							<references></references>
+							<custom>
+								<steps_separated>
+									<step>
+										<index>1</index>
+										<content>Step 1</content>
+										<expected>Verify no error</expected>
+									</step>
+									<step>
+										<index>2</index>
+										<content>Step 2</content>
+										<expected>Verify no error 2</expected>
+									</step>
+									<step>
+										<index>3</index>
+										<content>Step 3</content>
+										<expected>Verify no error 3</expected>
+									</step>
+								</steps_separated>
+							</custom>
+						</case>
+						<case>
+							<id>C2221116</id>
+							<title>Test case 9</title>
+							<type>Automated</type>
+							<priority>High</priority>
+							<estimate></estimate>
+							<references></references>
+							<custom>
+								<steps_separated>
+									<step>
+										<index>1</index>
+										<content>$%^
+n12
+%%%%
+^^^^</content>
+										<expected>@#$%</expected>
+									</step>
+									<step>
+										<index>2</index>
+										<content>12323
+123123
+3124213g1233
+****</content>
+										<expected>p***4</expected>
+									</step>
+								</steps_separated>
+							</custom>
+						</case>
+					</cases>
+				</section>
+				<section>
+					<name>Logger</name>
+					<description></description>
+					<cases>
+						<case>
+							<id>C2228993</id>
+							<title>GUI Logger 3</title>
+							<type>Automation Candidate</type>
+							<priority>High</priority>
+							<estimate></estimate>
+							<references></references>
+							<custom>
+								<steps_separated>
+									<step>
+										<index>1</index>
+										<content>Set 1234
+1234
+1234</content>
+										<expected></expected>
+									</step>
+									<step>
+										<index>2</index>
+										<content>Login to GUI yy**</content>
+										<expected>123
+1234&amp;1234
+1234
+    &quot;Objects&quot;: [
+        {
+            &quot;ObjName&quot;: &quot;1234e&quot;,
+            &quot;Param&quot;: [
+                {
+                    &quot;ParamName&quot;: &quot;idle&quot;,
+                    &quot;ParamValue&quot;: &quot;97&quot;
+                }
+            ]
+        }
+    ]
+}
+</expected>
+									</step>
+								</steps_separated>
+							</custom>
+						</case>
+						
+					</cases>
+				</section>
+			</sections>
+		</section>
+	</sections>
+</suite>
